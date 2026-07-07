@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>LUNA</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header-title">🌙 LUNA</div>
+        </header>
+
+        <main id="mainContent">
+            <!-- Главная -->
+            <section id="homeScreen" class="screen active">
+                <div class="profile-card">
+                    <div class="avatar">🌙</div>
+                    <h1>LUNA</h1>
+                    <p class="subtitle">Твой проводник</p>
+                    <button class="btn-primary" onclick="navigateTo('chatScreen')">💬 Чат</button>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item" onclick="navigateTo('girlsScreen')"><span>👧</span><span>Девочки</span></div>
+                    <div class="feature-item" onclick="navigateTo('chatScreen')"><span>💬</span><span>Чат</span></div>
+                    <div class="feature-item" onclick="navigateTo('shopScreen')"><span>🛍️</span><span>Магазин</span></div>
+                    <div class="feature-item" onclick="navigateTo('profileScreen')"><span>👤</span><span>Профиль</span></div>
+                </div>
+            </section>
+
+            <!-- Чат -->
+            <section id="chatScreen" class="screen">
+                <div class="profile-card">
+                    <h2>💬 Чат с LUNA</h2>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot"><div class="msg-content">Привет! Я LUNA 😈</div></div>
+                </div>
+                <div class="chat-input">
+                    <input id="chatInput" placeholder="Напиши..." />
+                    <button id="sendBtn">➤</button>
+                </div>
+            </section>
+
+            <!-- Девочки -->
+            <section id="girlsScreen" class="screen">
+                <div class="profile-card"><h2>👧 Девочки</h2></div>
+                <div class="girls-list">
+                    <div class="girl-card"><span class="girl-avatar">🔥</span><div class="girl-info"><h3>Алиса</h3><p>Страстная</p></div></div>
+                    <div class="girl-card"><span class="girl-avatar">🌸</span><div class="girl-info"><h3>Милана</h3><p>Нежная</p></div></div>
+                </div>
+            </section>
+
+            <!-- Магазин -->
+            <section id="shopScreen" class="screen">
+                <div class="profile-card"><h2>🛍️ Магазин</h2><p>Скоро...</p></div>
+            </section>
+
+            <!-- Профиль -->
+            <section id="profileScreen" class="screen">
+                <div class="profile-card"><h2>👤 Профиль</h2><p id="userName">Гость</p></div>
+            </section>
+        </main>
+
+        <!-- Навигация -->
+        <nav class="bottom-nav">
+            <div class="nav-item active" onclick="navigateTo('homeScreen')"><span>🏠</span><span>Главная</span></div>
+            <div class="nav-item" onclick="navigateTo('girlsScreen')"><span>👧</span><span>Девочки</span></div>
+            <div class="nav-item" onclick="navigateTo('chatScreen')"><span>💬</span><span>Чат</span></div>
+            <div class="nav-item" onclick="navigateTo('shopScreen')"><span>🛍️</span><span>Магазин</span></div>
+            <div class="nav-item" onclick="navigateTo('profileScreen')"><span>👤</span><span>Профиль</span></div>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
